@@ -85,11 +85,10 @@ showWinner(1);
 }
 
  function animateCircle(current) {
-     //context.clearRect(0, 0, canvas.width, canvas.height);
      context.beginPath();
      context.arc(x, y, radius, -(quart), ((circ) * current) - quart, false);
      context.stroke();
-     curPerc++;
+     curPerc+=7;
      if (curPerc < endPercent) {
          requestAnimationFrame(function () {
              animateCircle(curPerc / 100);
