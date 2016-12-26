@@ -1,65 +1,38 @@
-.backgroundSquare {
-  position: absolute;
+@import(./bootstrap.min.css);
+html,body, .container-table{
+	height: 100%;
+}
+
+.container-properties{
+	width: 50vw;
+	height: 50vw;
+}
+
+.background-box{
+    margin: 10vw;
+    width: 25vw;
+    height: 25vw;
+	align-items:center;
     background: #bbada0;
-    width: 35vw;
-    height: 35vw;
-    top: 10%;
-  left: 30%;
+    position: relative;
 }
 
-.grid-row-1{
-  position: absolute;
-  left: 7%;
-  right: 5%;
-  top: 8%;
-  background: #bbada0;
-  height: 7vw;
-  width: 30vw;
+.cell {
+    margin: 1vw;
+    left: 2%;
+    top: 5%;
+    width: 6vw;
+    height: 6vw;
+    background-color: #eee4da;
 }
 
-.grid-row-2{
-  position: absolute;
-  left: 7%;
-  right: 5%;
-  top: 38.9%;
-  background: #bbada0;
-  height: 7vw;
-  width: 30vw;
+.row-properties{
+    height: 8vw;
 }
 
-.grid-row-3{
-  position: absolute;
-  left: 7%;
-  right: 5%;
-  top: 68%;
-  background: #bbada0;
-  height: 7vw;
-  width: 30vw;
-}
-
-.grid-cell-1{
-  position: absolute;
-  left: 7%;
-  width: 7.5vw;
-  height: 7vw;
-  background: #eee4da;
-  margin-right: 5px;
-}
-
-.grid-cell-2{
-  position: absolute;
-  left: 37%;
-  width: 7.5vw;
-  height: 7vw;
-  background: #eee4da;
-}
-
-.grid-cell-3{
-  position: absolute;
-  left: 67%;
-  width: 7.5vw;
-  height: 7vw;
-  background: #eee4da;
+.canvas-element{
+    width: 6vw;
+    height: 6vw;
 }
 
 .modal {
@@ -98,3 +71,5 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+
