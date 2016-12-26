@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>TicTacToe Game</title>
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
-<!-- Start your code here -->
+	<head>
+		<meta name="viewport" content="Width=device-width initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./css/styles.css">
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+		<title>TicTacToe Game</title>
 
-  <div class="backgroundSquare">
-    <div class="grid-row-1">
-      <div id="grid-cell-1" class="grid-cell-1"> 
-        <canvas id="canvasElement-1" height="100" width="100"></canvas>
-      </div>
-      <div id="grid-cell-2" class="grid-cell-2">     
-        <canvas id="canvasElement-2" height="100" width="100"></canvas>
-      </div>
-      <div id="grid-cell-3" class="grid-cell-3">
-        <canvas id="canvasElement-3" height="100" width="100"></canvas>
-      </div>
-    </div>
-    <div class="grid-row-2">
-      <div id="grid-cell-4" class="grid-cell-1">
-        <canvas id="canvasElement-4" height="100" width="100"></canvas>
-      </div>
-      <div id="grid-cell-5" class="grid-cell-2">
-        <canvas id="canvasElement-5" height="100" width="100"></canvas>
-      </div>
-      <div id="grid-cell-6" class="grid-cell-3">      
-        <canvas id="canvasElement-6" height="100" width="100"></canvas>
-      </div>
-    </div>
-     <div class="grid-row-3">
-      <div id="grid-cell-7" class="grid-cell-1">      
-        <canvas id="canvasElement-7" height="100" width="100"></canvas>
-      </div>
-      <div id="grid-cell-8" class="grid-cell-2">      
-        <canvas id="canvasElement-8" height="100" width="100"></canvas>
-      </div>
-      <div id="grid-cell-9" class="grid-cell-3">      
-        <canvas id="canvasElement-9" height="100" width="100"></canvas>
-      </div>
-    </div>
-  </div>
-  
-  <div id="myModal" class="modal">
+	</head>
+	<body>
+		<!-- 1st row */ -->
+		<div class="container container-properties">
+				<div class="background-box col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="row row-properties">
+						<div id="grid-cell-1" class="cell col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        					<canvas id="canvasElement-1" class="canvas-element"></canvas>
+						</div>
+						<div id="grid-cell-2" class="cell col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        					<canvas id="canvasElement-2" class="canvas-element"></canvas>
+						</div>
+						<div id="grid-cell-3" class="cell col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        					<canvas id="canvasElement-3" class="canvas-element"></canvas>
+						</div>
+	                 </div>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">
-      <img src="images/close.png"></img>
-    </span>
-    <p id="winnerDetails">Some text in the Modal..</p>
-  </div>
+	                 <div class="row row-properties">                               
+						<div id="grid-cell-4" class="cell col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        					<canvas id="canvasElement-4" class="canvas-element"></canvas>
+						</div>
+						<div id="grid-cell-5" class="cell col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        					<canvas id="canvasElement-5" class="canvas-element"></canvas>
+						</div>
+						<div id="grid-cell-6" class="cell col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        					<canvas id="canvasElement-6" class="canvas-element"></canvas>
+						</div>
+	                </div> 
 
-</div>
- 
-  
-<!-- End your code here -->
-<script type="text/javascript" src="js/script.js"></script>
-</body>
-</html>
+	                 <div class="row row-properties">
+						<div id="grid-cell-7" class="cell col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        					<canvas id="canvasElement-7" class="canvas-element"></canvas>
+						</div>
+						<div id="grid-cell-8" class="cell col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        					<canvas id="canvasElement-8" class="canvas-element"></canvas>
+						</div>
+						<div id="grid-cell-9" class="cell col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        					<canvas id="canvasElement-9" class="canvas-element"></canvas>
+						</div>
+					 </div>  
+				</div>
+		</div>
+		<div id="myModal" class="modal">
+  			<!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">
+		      <img src="images/close.png"></img>
+		    </span>
+		    <p id="winnerDetails">Some text in the Modal..</p>
+		  </div>
+		</div>
+		<script type="text/javascript" src="./js/scripts.js"></script>
+	</body>
+</html> 

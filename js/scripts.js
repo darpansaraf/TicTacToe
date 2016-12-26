@@ -126,38 +126,39 @@ function CheckBoard(){
 function animateCross(current)
 {
   context.beginPath();
-  context.moveTo(x - 20, y - 20);
-    context.lineTo(x + 20, y + 20);
+  context.moveTo(x - 15, y - 15);
+    context.lineTo(x + 15, y + 15);
     context.stroke();
 
-    context.moveTo(x + 20, y - 20);
-    context.lineTo(x - 20, y + 20);
+    context.moveTo(x + 15, y - 15);
+    context.lineTo(x - 15, y + 15);
     context.stroke();
 }
 
 
 function initialize(elementId){
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-window.requestAnimationFrame = requestAnimationFrame;
-var canvasElementId = 'canvasElement-'+ elementId;
-console.log(canvasElementId);
-canvas = document.getElementById(canvasElementId);
-console.log(canvas);
-context = canvas.getContext('2d');
-context.lineWidth = 8;
-context.strokeStyle = '#ad2323';
-context.shadowOffsetX = 0;
-context.shadowOffsetY = 0;
-context.shadowBlur = 1;
-context.shadowColor = '#656565';
-x = canvas.width / 2;
-y = canvas.height / 2;
-radius = 25;
-endPercent = 110;
-curPerc = 0;
-counterClockwise = true;
-circ = Math.PI * 2;
-quart = Math.PI / 2;
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+    var canvasElementId = 'canvasElement-'+ elementId;
+    console.log(canvasElementId);
+    canvas = document.getElementById(canvasElementId);
+    fitToContainer(canvas);
+    console.log(canvas);
+    context = canvas.getContext('2d');
+    context.lineWidth = 4;
+    context.strokeStyle = '#ad2323';
+    context.shadowOffsetX = 0;
+    context.shadowOffsetY = 0;
+    context.shadowBlur = 1;
+    context.shadowColor = '#656565';
+    x = canvas.width / 2;
+    y = canvas.height / 2;
+    radius = 15;
+    endPercent = 110;
+    curPerc = 0;
+    counterClockwise = true;
+    circ = Math.PI * 2;
+    quart = Math.PI / 2;
 }
 
 function play(player1)
@@ -348,3 +349,9 @@ document.getElementById("grid-cell-9").addEventListener("click", function() {
   CheckBoard();
 });
 
+function fitToContainer(canvas){
+  canvas.style.width='100%';
+  canvas.style.height='100%';
+  canvas.width  = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
